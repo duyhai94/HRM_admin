@@ -1,0 +1,43 @@
+.hrm-detail-employee {
+    color: white;
+    .header {
+        .title {
+            color: white;
+        }
+        .button-f {
+            text-align: right;
+        }
+    }
+    .content {
+        padding: 20px;
+        .card {
+            background-color: #292929;
+            border-radius: 25px;
+            padding: 30px;
+            color: white;
+            margin-bottom: 20px;
+            .row {
+                padding-bottom: 20px;
+            }
+        }
+
+        .avatar {
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    .hrm-create-salary {
+        overflow: auto;
+        height: 980px;
+        .item {
+            background-color: #292929;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            padding: 20px;
+            .row {
+                padding: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.hrm-create-employee {
+    color: white;
+    .header {
+        .title {
+            color: white;
+        }
+        .button-f {
+            text-align: right;
+        }
+    }
+    .content {
+        padding: 20px;
+        .card {
+            background-color: #292929;
+            border-radius: 25px;
+            padding: 30px;
+            color: white;
+            margin-bottom: 20px;
+            .row {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .hrm-create-salary {
+        padding: 30px;
+        background-color: #292929;
+        border-radius: 25px;
+        .row {
+            padding-bottom: 20px;
+        }
+    }
+}

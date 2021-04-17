@@ -1,0 +1,23 @@
+.overall-details {
+  width: 100%;
+  height: 50px;
+  background-color: #292929;
+  margin-top: 2em;
+  border-radius: 20px;
+}
+.details-setup {
+  display: flex;
+  padding: 14px;
+}
+.title-setup-workday {
+  color: white;
+  font-size: 16px;
+  width: 30%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}

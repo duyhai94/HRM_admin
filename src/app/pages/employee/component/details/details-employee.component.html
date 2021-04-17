@@ -1,0 +1,349 @@
+<div class="hrm-detail-employee">
+    <div class="row">
+        <div class="col-10">
+            <img
+                routerLink="/employee"
+                src="assets/svg/hrm-icon-arrow_forward_ios.svg"
+            />
+            Chi tiết nhân viên
+        </div>
+    </div>
+    <div class="row hrm-p-t-40 content">
+        <div class="col-2">
+            <img
+                class="avatar"
+                src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+            />
+            <div class="hrm-btn-delelte-account">Xóa TK</div>
+            <div class="hrm-btn-lock-account">Khóa TK</div>
+        </div>
+        <div class="col-10">
+            <mat-tab-group>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <img src="assets/svg/hrm-icon-profile.svg" />
+                        <span class="title-mat-tab"> Hồ sơ cá nhân </span>
+                    </ng-template>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-11">
+                                        <img src="assets/svg/hrm-icon-overview.svg" />
+                                        Tổng quan
+                                    </div>
+                                    <div class="col-1">
+                                        <img
+                                            src="assets/svg/hrm-icon-down.svg"
+                                            (click)="hide.overview = !hide.overview"
+                                        />
+                                    </div>
+                                </div>
+                                <div *ngIf="!hide.overview">
+                                    <div class="row">
+                                        <div class="col-4">Họ Tên</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.LastName"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Mã NV</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.EmployeeId"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Giới tính</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.Gender"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Ngày sinh</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="date"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.DOB"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Chức vụ</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Phòng ban</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-11">
+                                        <img src="assets/svg/hrm-icon-overview.svg" />
+                                        Tài chính
+                                    </div>
+                                    <div class="col-1">
+                                        <img
+                                            src="assets/svg/hrm-icon-down.svg"
+                                            (click)="hide.finance = !hide.finance"
+                                        />
+                                    </div>
+                                </div>
+                                <div *ngIf="!hide.finance">
+                                    <div class="row">
+                                        <div class="col-4">Mã số thuế</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.TaxCode"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">STK</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.BankAccountNumber"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Ngân hàng</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.BankName"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Chi nhánh</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.BankBranch"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-11">
+                                        <img src="assets/svg/hrm-icon-contact.svg" />
+                                        Liên hệ
+                                    </div>
+                                    <div class="col-1">
+                                        <img
+                                            src="assets/svg/hrm-icon-down.svg"
+                                            (click)="hide.contact = !hide.contact"
+                                        />
+                                    </div>
+                                </div>
+                                <div *ngIf="!hide.contact">
+                                    <div class="row">
+                                        <div class="col-4">Email</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.Username"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Điện thoại</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.Phone"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-11">
+                                        <img src="assets/svg/hrm-icon-administrative.svg" />
+                                        Hành chính
+                                    </div>
+                                    <div class="col-1">
+                                        <img
+                                            src="assets/svg/hrm-icon-down.svg"
+                                            (click)="hide.administrative = !hide.administrative"
+                                        />
+                                    </div>
+                                </div>
+                                <div *ngIf="!hide.administrative">
+                                    <div class="row">
+                                        <div class="col-4">Nơi sinh</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.BirthLocation"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Quê quán</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.HomeTown"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Thường trú</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.ResidentLocationAddress"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Số CMT</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.NationalIdentityNumber"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Ngày cấp</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="date"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.NationalIdentityDate"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Nơi cấp</div>
+                                        <div class="col-8">
+                                            <input
+                                                type="text"
+                                                class="hrm-input-create-employee"
+                                                [(ngModel)]="model.NationalIdentityLocation"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <img src="assets/svg/hrm-icon-contact.svg" />
+                        <span class="title-mat-tab"> Thông tin công việc </span>
+                    </ng-template>
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div
+                                    class="col-6 hrm-text-align-right"
+                                    (click)="openDialog()"
+                                >
+                                    <img src="assets/svg/hrm-icon-add.svg" />
+                                    Tạo mức lương mới
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-3"></div>
+                        <div class="col-6 hrm-m-t-40 hrm-create-salary">
+                            <div
+                                class="item"
+                                *ngFor="let i of listCompanyEmployee"
+                            >
+                                <div class="row">
+                                    <div class="title-info col-10">{{i.PositionName}}</div>
+                                    <div
+                                        class="col-1"
+                                        (click)="onDeleteCompany(i)"
+                                    > <img src="assets/svg/hrm-icon-delete.svg" /></div>
+                                    <div
+                                        class="col-1"
+                                        (click)="i.hide = !i.hide"
+                                    > <img src="assets/svg/hrm-icon-down.svg" /></div>
+                                </div>
+                                <div *ngIf="i.hide">
+                                    <div class="row">
+                                        <div class="col-4">Mức lương</div>
+                                        <div class="col-8">
+                                            {{i.BaseSalary | number}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Ngày hiệu lực</div>
+                                        <div class="col-8">
+                                            {{i.dateCover}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Chức vụ</div>
+                                        <div class="col-8">
+                                            {{i.PositionName}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Phòng ban</div>
+                                        <div class="col-8">
+                                            {{i.DepartmentName}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

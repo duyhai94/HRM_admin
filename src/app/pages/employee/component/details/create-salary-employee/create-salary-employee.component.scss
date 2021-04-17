@@ -1,0 +1,13 @@
+.create-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .form-input{
+        width: 50%;
+        .row{
+            margin-top: 20px;
+            color: white;
+        }
+    }
+}

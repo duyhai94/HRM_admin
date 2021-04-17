@@ -1,0 +1,68 @@
+<div class="title-page">
+  <div class="item-title">Công</div>
+  <div class="search w-50">
+    <input type="search" class="hrm-input-search" placeholder="Tìm kiếm..." />
+    <img src="assets/svg/hrm-icon-search.svg" alt="" />
+  </div>
+</div>
+<div class="container-pages">
+  <div class="list-icon-employee">
+    <div class="workday-select-month">
+      <span>Tháng</span>
+      <div>
+        <input type="month" class="hrm-input-date" />
+      </div>
+    </div>
+    <div class="workday-img-month" (click)="openDialog()">
+      <img
+        src="assets/svg/green-dot.svg"
+        alt=""
+      />
+    </div>
+    <div class="workday-btn">
+      <button class="hrm-btn-excel">Xuất excel</button>
+      <button class="hrm-btn-account-salary">Tính lương</button>
+    </div>
+  </div>
+</div>
+<div>
+  <table class="hrm-table-workday">
+    <thead>
+      <tr>
+        <th class="th-title-table">Tên</th>
+        <th class="th-title-table">Mã NV</th>
+        <th class="th-title-table">Công chuẩn</th>
+        <th class="th-title-table">Công thực</th>
+        <th class="th-title-table">Nghỉ phép</th>
+        <th class="th-title-table">Nghỉ ko lương</th>
+        <th class="th-title-table">Công lễ</th>
+        <th class="th-title-table">Sớm, muộn</th>
+        <th class="th-title-table">Công OT</th>
+        <th class="th-title-table">Số phép còn</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngClass]="item.check ? 'show' : 'hidden'" *ngFor="let item of list">
+        <td>
+          <div class="name">
+            <input
+              (change)="item.check = $event.target.checked"
+              type="checkbox"
+            />
+            <img src="assets/svg/default-avatar.jpg" alt="" />
+            <span>Peter</span>
+          </div>
+        </td>
+        <td>S25869</td>
+        <td>18</td>
+        <td>18</td>
+        <td>18</td>
+        <td>18</td>
+        <td>18</td>
+        <td>18</td>
+        <td>18</td>
+        <td>19</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

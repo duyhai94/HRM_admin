@@ -1,0 +1,64 @@
+<div class="container-content">
+  <div class="header">
+    <div class="name">Lương</div>
+    <div class="search w-50">
+      <img src="assets/svg/hrm-icon-search.svg" alt="" />
+      <input type="search" placeholder="Tìm kiếm..." class="hrm-input-search" />
+    </div>
+  </div>
+  <div class="manager">
+    <div class="month">
+      <span>Tháng</span>
+      <input type="month" id="start" name="start" />
+    </div>
+    <div class="position">
+      <span>Manager</span>
+    </div>
+    <div class="salary">Gửi phiếu Lương</div>
+  </div>
+  <div class="table-salary">
+    <table>
+      <thead class="table-head">
+        <tr>
+          <th class="th-title-table">Tên</th>
+          <th class="th-title-table">Mã NV</th>
+          <th class="th-title-table">Lương CB</th>
+          <th class="th-title-table">K.cộng trc thuế</th>
+          <th class="th-title-table">K.trừ trc thuế</th>
+          <th class="th-title-table">Tổng TN</th>
+          <th class="th-title-table">Truy thu</th>
+          <th class="th-title-table">Thực lĩnh</th>
+        </tr>
+      </thead>
+
+      <tbody class="scroll">
+        <tr  *ngFor="let i of listAccountCategory" [ngClass]="i.check ? 'show' : 'hidden'">
+          <td >
+            <div class="name">
+              <input (change)="i.check = $event.target.checked" type="checkbox" />
+              <img src="assets/svg/hrm-avatar-defaut.svg" alt="" />
+              Nguyễn Văn Nam
+            </div>
+          </td>
+          <td>10.000.000</td>
+          <td>10.000.000</td>
+          <td>10.000.000</td>
+          <td>10.000.000</td>
+          <td>10.000.000</td>
+          <td>10.000.000</td>
+          <td>
+              <div class="salary">
+                  14.000.000
+                  <img src="assets/svg/hrm-icon-check.svg" alt="">
+              </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="total">
+     <div class="salary-total">
+          <span>Tổng: </span><div class="detail">200.320.000 VNĐ</div>
+     </div>
+  </div>
+</div>

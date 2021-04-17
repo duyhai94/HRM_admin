@@ -1,0 +1,67 @@
+<div class="hrm-employee">
+    <div class="row">
+        <div class="hrm-title-page col-2">Nhân Viên</div>
+        <div class="input-search col-6">
+            <input
+                type="search"
+                class="hrm-input-search"
+                placeholder="search"
+            />
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="list-icon-employee">
+        <img
+            (click)="openDialog()"
+            src="assets/svg/hrm-icon-add-employee.svg"
+        />
+        <img src="assets/svg/hrm-icon-delele-employee.svg" />
+        <img src="assets/svg/hrm-icon-edit-empoyee.svg" />
+    </div>
+    <div class="container-pages">
+        <div>
+            <table class="hrm-table-employee">
+                <tr>
+                    <th
+                        colspan="3"
+                        class="th-title-table"
+                    >Tên</th>
+                    <th class="th-title-table">Mã NV</th>
+                    <th class="th-title-table">Chức vụ</th>
+                    <th class="th-title-table">Bộ phận</th>
+                    <th class="th-title-table">Email</th>
+                    <th class="th-title-table">Điện thoại</th>
+                </tr>
+                <tr>
+                    <th colspan="8">
+                        <div class="col-span"></div>
+                    </th>
+                </tr>
+
+                <tr
+                    *ngFor="let i of listEmployee"
+                    routerLink="/employee/{{i.EmployeeId}}"
+                >
+                    <td>
+                        <input
+                            checked=i.checked
+                            type="checkbox"
+                        />
+                    </td>
+                    <td>
+                        <img
+                            class="avatar-employee"
+                            [src]="i.MediaURL"
+                        />
+                    </td>
+                    <td>{{i.LastName}}</td>
+                    <td>{{i.EmployeeCode}}</td>
+                    <td>{{i.PositionName}}</td>
+                    <td>{{i.DepartmentName}}</td>
+                    <td>{{i.Username}}</td>
+                    <td>{{i.Phone}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
